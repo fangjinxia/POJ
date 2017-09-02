@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <sstream>
 #include <cstdio>
 #include <cmath>
@@ -6,7 +6,7 @@
 #include <map>
 
 using namespace std;
-///< ö��
+///< 枚举
 const double EPS = 1e-6;
 
 int main ()

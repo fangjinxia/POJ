@@ -1,4 +1,4 @@
-#include<cstdio>  //±¾ÎÊÌâ×ª»¯³ÉÌ°ĞÄË¼ÏëµÄÇø¼äÑ¡µãÎÊÌâ
+#include<cstdio>  //æœ¬é—®é¢˜è½¬åŒ–æˆè´ªå¿ƒæ€æƒ³çš„åŒºé—´é€‰ç‚¹é—®é¢˜
 #include<cmath>
 #include<algorithm>
 using namespace std;
@@ -12,15 +12,15 @@ int cmp(const Line &a,const Line &b){
     return a.r<b.r;
 }
 int solve(){
-    if(d<=0||n<=0)return -1;   //×¢Òâ¼«¶ËÌØÊâµÄÇé¿ö
+    if(d<=0||n<=0)return -1;   //æ³¨æ„æç«¯ç‰¹æ®Šçš„æƒ…å†µ
     for(int i=0;i<n;i++){
         double dis=d*d*1.0-Y[i]*Y[i]*1.0;
-        if(dis<0)return -1;   //²»Âú×ãÌõ¼ş
+        if(dis<0)return -1;   //ä¸æ»¡è¶³æ¡ä»¶
         line[i].l=X[i]-sqrt(dis);
         line[i].r=X[i]+sqrt(dis);
     }
     sort(line,line+n,cmp);
-    int t=0,ans=1;   //µÚÒ»¸öÀ×´ïÕ¾¿Ï¶¨Òª·ÅÖÃ
+    int t=0,ans=1;   //ç¬¬ä¸€ä¸ªé›·è¾¾ç«™è‚¯å®šè¦æ”¾ç½®
     for(int i=1;i<n;i++){
         if(line[i].l>line[t].r){
             t=i;
